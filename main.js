@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import Dial from './components/Dial.js'
+
+import DialPanel from './components/DialPanel.js'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      percent: 25
+      dials: [25, 15, 44],
     }
   }
 
   render () {
     return (
         <div>
-          <Dial percent={this.state.percent} />
+          <DialPanel dials={this.state.dials} />
         </div>
         )
   }
