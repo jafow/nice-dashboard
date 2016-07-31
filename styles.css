@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    font-family: "Roboto", monospace, sans;
+}
+
+.dial {
+    font-size: 18px;
+    padding: 2px auto;
+    height: 240px;
+    width: 240px;
+    border: 2px solid gray;
+}
