@@ -5,16 +5,19 @@ class CreateTask extends Component {
     super()
     // this.addTask = this.addTask.bind(this)
     this.name = ''
+    this.newTaskName = this.newTaskName.bind(this)
   }
-  // addTask() {
-    // console.log('here a thing ', this.refs)
-  // }
+  newTaskName () {
+    var name = this.name.value
+    if (!name) return
+    console.log('here a thing ', name)
+  }
   render() {
     return (
         <div className={"display-panel tasks"}>
-          <h2>Create A New Task</h2>
+          <h2>Create A BLUE Task</h2>
           <input type="text" ref={(node) => this.name = node} placeholder="Task Name"/>
-          <button onClick={this.props.addTask.bind(this, this.name.value)}>Create!</button>
+          <button onClick={this.newTaskName}>Create!</button>
         </div>
         )
   }
