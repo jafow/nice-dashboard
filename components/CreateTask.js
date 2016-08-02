@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 class CreateTask extends Component {
   constructor(props) {
     super(props)
-    // this.addTask = this.addTask.bind(this)
     this.name = ''
     this.newTaskName = this.newTaskName.bind(this)
   }
@@ -12,9 +11,6 @@ class CreateTask extends Component {
     if (!name) return
     this.name.value = ''
     return this.props.addTask(name)
-  }
-  componentDidUpdate() {
-    this.props.addTask(this.name)
   }
   render() {
     return (
