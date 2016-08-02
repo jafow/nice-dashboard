@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 class CreateTask extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     // this.addTask = this.addTask.bind(this)
     this.name = ''
     this.newTaskName = this.newTaskName.bind(this)
@@ -10,7 +10,11 @@ class CreateTask extends Component {
   newTaskName () {
     var name = this.name.value
     if (!name) return
-    console.log('here a thing ', name)
+    this.name.value = ''
+    return this.props.addTask(name)
+  }
+  componentDidUpdate() {
+    this.props.addTask(this.name)
   }
   render() {
     return (
