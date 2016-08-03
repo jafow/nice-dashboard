@@ -14,9 +14,8 @@ class App extends Component {
     this.addTask = this.addTask.bind(this)
   }
 
-  addTask(name) {
-    console.log('adding a task name:', name)
-    this.setState({tasks: [...this.state.tasks, {name: name}]})
+  addTask(task) {
+    this.setState({tasks: [...this.state.tasks, task]})
   }
   render () {
     var lastTask = this.state.tasks.length ? this.state.tasks[this.state.tasks.length - 1] : ''
