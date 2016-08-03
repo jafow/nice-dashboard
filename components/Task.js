@@ -1,9 +1,10 @@
+import React from 'react'
 
 const Task = (props) => (
-    <div>
-      Name: {props.name}
-      Description: {props.description}
-    </div>
+    <li className="task">
+      <p>Name: {props.name}</p>
+      <p>Description: {props.description}</p>
+    </li>
     )
 
 export default Task

@@ -5,16 +5,20 @@ import Task from './Task.js'
 class TaskPanel extends Component {
   render() {
     return (
-        <div className={"display-panel"}>
+        <div>
           <h2>Tasks In Progress</h2>
-          {this.props.tasks.map((task, i) =>
-              <Task
-              name={task.name}
-              description={task.description}
-              key={i}
-              />
-              )}
+          <div className={"display-panel"}>
+            <ul>
+            {this.props.tasks.map((task, i) =>
+                <Task
+                name={task.name}
+                description={task.description}
+                key={i}
+                />
+                )}
+            </ul>
           </div>
+        </div>
         )
   }
 }

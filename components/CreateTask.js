@@ -19,15 +19,17 @@ class CreateTask extends Component {
   }
   render() {
     return (
-        <div className={"display-panel tasks"}>
-          <h2>Create A BLUE Task</h2>
-          <p>Task Name</p>
-          <input type="text" ref={(node) => this.name = node} placeholder="Task Name"/>
-          <p>Description</p>
-          <input type="text" ref={(node) => this.description = node} placeholder="Description"/>
-          <button onClick={this.newTaskName}>Create!</button>
+      <div>
+          <h2>Create A New Task</h2>
+          <div className={"display-panel tasks"}>
+            <p>Task Name</p>
+            <input type="text" ref={(node) => this.name = node} placeholder="Task Name"/>
+            <p>Description</p>
+            <input type="text" ref={(node) => this.description = node} placeholder="Description"/>
+            <button onClick={this.newTaskName}>Create!</button>
         </div>
-        )
+      </div>
+    )
   }
 }
 
