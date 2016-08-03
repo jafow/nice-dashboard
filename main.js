@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 import CreateTask from './components/CreateTask.js'
+import TaskPanel from './components/TaskPanel.js'
 import DialPanel from './components/DialPanel.js'
 
 class App extends Component {
@@ -22,9 +23,9 @@ class App extends Component {
     if (!lastTask) lastTask = {}, lastTask.name = ''
     return (
         <div>
-          <DialPanel dials={this.state.dials} />
-          <CreateTask addTask={this.addTask}/> 
-          <p>TaskName: {lastTask.name} </p>
+          <DialPanel dials={this.state.dials}/>
+          <CreateTask addTask={this.addTask}/>
+          <TaskPanel tasks={this.state.tasks}/>
         </div>
         )
   }
