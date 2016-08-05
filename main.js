@@ -27,7 +27,7 @@ class App extends Component {
           <DialPanel dials={this.state.dials}/>
           <CreateTask addTask={this.addTask}/>
           <TaskPanel title={inProgressHeader} tasks={this.state.tasks}/>
-          <TaskPanel title={completedHeader}/>
+          <TaskPanel title={completedHeader} tasks={this.state.tasks}/>
         </div>
         )
   }
