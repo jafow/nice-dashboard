@@ -10,7 +10,11 @@ class CreateTask extends Component {
   newTaskName () {
     var name = this.name
     var description = this.description
-    var task = {name: name.value, description: description.value}
+    var task = {
+      name: name.value,
+      description: description.value,
+      isCompleted: false
+    }
     this.clearInput(name, description)
     return this.props.addTask(task)
   }
