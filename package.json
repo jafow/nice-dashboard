@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm test",
     "build": "./node_modules/.bin/webpack -w",
-    "start": "node server.js ",
+    "start": "./node_modules/.bin/webpack-dev-server",
     "lint": "./node_modules/.bin/eslint ."
   },
   "author": "Jared Fowler (github.com/jafow) <jared.a.fowler@gmail.com>",
